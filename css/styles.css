@@ -1,0 +1,177 @@
+body {
+  font-family: "IBM Plex Sans", sans-serif;
+}
+.box {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+.hdr h1 {
+  color: #ffffff;
+  text-align: center;
+  font-size: 0.9rem;
+}
+.hdr {
+  background: black;
+  height: 5vh;
+  border-radius: 15%;
+  text-align: center;
+  width: 90%;
+}
+.container {
+  display: flex;
+  width: 60vw;
+  height: 80vh;
+  box-shadow: 2px 4px 6px 1px rgba(50, 50, 50, 0.14);
+  border-radius: 15%;
+  flex-direction: column;
+  justify-items: center;
+  align-items: center;
+}
+.nav-bar-partitions {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin: 1vw;
+  justify-items: center;
+}
+.nav-bar-devices {
+  justify-items: center;
+  padding: 10px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+.icons {
+  width: 100%;
+  height: 3vh;
+  margin: 0 10px;
+  display: flex;
+  position: relative;
+  overflow: hidden;
+  border-radius: 50%;
+  padding: 2px;
+}
+
+.icons::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to left, #b52b65, #ed6663);
+  z-index: -1;
+  border-radius: 50%;
+  transform: translate(100%, 100%);
+  transition: all 0.4s;
+}
+.icons:hover::before {
+  transform: translate(0);
+  animation: anim -4s linear;
+}
+
+@keyframes anim {
+  0%,
+  100% {
+    width: 100%;
+    height: 100%;
+  }
+  50% {
+    width: 50%;
+    height: 50%;
+  }
+}
+.icons:active input {
+  color: whitesmoke;
+  background: linear-gradient(to right, #b52b65, #ed6663);
+  border: none;
+}
+
+.icon-letters {
+  background: none;
+  outline: none;
+  border: none;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+#selected,
+#pin {
+  color: red;
+  text-align: center;
+  align-content: center;
+  padding: 15px;
+}
+
+#reset {
+  width: 30%;
+  
+}
+.inputs {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  margin-top: 15px;
+  text-align-last: center;
+  justify-content: center;
+  grid-gap: 5px;
+  width: 85%;
+}
+
+.btn {
+  justify-content: center;
+  display: flex;
+  margin-top: 15px;
+}
+
+.screen {
+  width: 80%;
+  height: 15vh;
+  
+  font-family: "Font Awesome\ 5 Free", Arial, Helvetica, sans-serif;
+  font-weight: 300;
+  color: #585858;
+  box-shadow: 2px 3px 20px 1px rgba(0, 0, 0, 0.1);
+  border: 0px solid transparent;
+  border-radius: 0.5rem;
+}
+.screen::placeholder {
+    
+    
+    font-size: 0.8em;
+    
+  }
+
+ 
+
+form textarea[type="text"]:focus {
+  outline: none;
+  box-shadow: 2px 3px 20px 1px rgba(0, 0, 0, 0.3);
+}
+.footer {
+  margin-top: 15px;
+  text-align: center;
+}
+
+textarea {
+    overflow: auto;
+    resize: none;
+    padding: 6px;
+}
+ 
+@media (max-width: 600px) {
+  .inputs {
+    grid-template-columns: 1fr;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    text-align-last: center;
+    justify-content: center;
+  }
+  .screen {
+    height: 10vh;
+  }
+  .container {
+    height: 90vh;
+  }
+}

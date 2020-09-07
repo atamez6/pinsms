@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SMS-pin</title>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@1,200&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/normalized.css" />
+    <link rel=”icon” type="image/vnd.microsoft.icon" href=”favicon.ico” sizes="20x20"/>
+</head>
+
+<body>
+    <div class="box">
+        <div class="container">
+            <header class="hdr">
+                <h1> SMS-PIN helper</h1>
+            </header>
+            <nav-bar class="nav-bar-partitions">
+                <div class="icons" id="global"> <input type="button" value="Global" class="icon-letters"></div>
+                <div class="icons" id="aup"> <input type="button" value="AUP" class="icon-letters"></div>
+                <div class="icons" id="andina"> <input type="button" value="ANDINA" class="icon-letters"></div>
+            </nav-bar>
+            <nav-bar class="nav-bar-devices">
+                <div class="icons" id="adr"> <input type="button" value="ADR" class="icon-letters"></div>
+                <div class="icons" id="web"> <input type="button" value="WEB" class="icon-letters"></div>
+                <div class="icons" id="stv"> <input type="button" value="STV" class="icon-letters"></div>
+                <div class="icons" id="stb"> <input type="button" value="STB" class="icon-letters"></div>
+            </nav-bar>
+            <section id="selected">-console.log- previous selected</section>
+            <div class="icons" id="reset"><input type="button" value="RESET" class="icon-letters"></div>
+            <main class="inputs">
+                <form>
+                    <textarea type="text" wrap="hard" placeholder="Ingresa HKS:" class="screen"  ></textarea>
+                    <div class="btn">
+                        <div class="icons" id="enviar"> <input type="button" value="Envíar" class="icon-letters"></div>
+                        <div class="icons" id="limpiar"> <input type="button" value="Limpíar" class="icon-letters"></div>
+                    </div>
+                </form>
+                <form>
+                    <textarea type="text" wrap="hard" placeholder="Ingresa Access Token:" class="screen" rows="4" cols="50"></textarea>
+                    <div class="btn">
+                        <div class="icons" id="enviar"> <input type="button" value="Envíar" class="icon-letters"></div>
+                        <div class="icons" id="limpiar"> <input type="button" value="Limpíar" class="icon-letters"></div>
+                    </div>
+                </form>
+            </main>
+            <section id="pin">-console.log- sms pin </section>
+            <footer class="footer">
+                <p> -sms- helper 2020--AT</p>
+            </footer>
+        </div>
+    </div>
+</body>
+
+</html>
